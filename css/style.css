@@ -1,0 +1,163 @@
+* ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+  
+  html {
+    font-size: 62.5% }
+
+  
+  body {
+    font-family: "Roboto", sans-serif;  
+    font-weight: 400;
+    color: #777777;
+    font-size: 1.6rem;
+    letter-spacing: .2rem;
+    padding: 5rem;
+    background-color: white; }
+  
+  .container {
+    background-color: #F7F7F7; }
+  
+  .header {
+    position: relative;
+    height: 95vh;
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/header-background.jpg) center/cover no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); }
+    .header__logo {
+      position: absolute;
+      left: 5rem;
+      top: 5rem;
+      height: 7rem;
+      width: 5.6rem; }
+    .header__box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center; }
+      
+    .title-first {
+      color: #ffffffff;
+      font-family: "Roboto";
+    }
+    .title-first-main {
+      font-weight: 800;
+      letter-spacing: 1rem;
+      font-size: 5rem;
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      animation-name: toptext;
+      animation-duration: 4s;
+      backface-visibility: hidden;
+      
+      
+    }
+    .title-first__secondary{
+      display: block;
+      font-size: 4rem;
+      font-weight: 100;
+      letter-spacing: 5px;
+      line-height: 4rem;
+      animation-name: textRight;
+      animation-duration: 4s;
+      backface-visibility: hidden;
+      margin-bottom: 6.5rem;
+    }
+    .bnt:link,:visited{
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #777777;
+      padding: 1.5rem 4rem;
+      background-color: white;
+      border-radius: 5rem;
+      display: inline-block;
+      transition: .3s;
+      position: relative;
+    }
+    .bnt:hover::after{
+      transform: translateY(-3px);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+      transform: scale(2);
+      opacity: 0;
+      
+    }
+    .bnt:active{
+      transform: translateY(-2px);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes BtnToUP {
+      0%{
+      opacity: 0;
+      transform: translateY(10rem);
+      }
+      100%{
+        opacity: 1;
+        transform: translateX(0px);
+
+      }
+    }
+
+  
+    
+
+    @keyframes toptext {
+      0%{
+      opacity: 0;
+      transform: translateX(-10rem);
+      }
+      80%{
+        transform: translate(+2rem);
+      }
+
+      100%{
+        transform: translateX(0px);
+
+      }
+    }
+
+    @keyframes textRight {
+      0%{
+      opacity: 0;
+      transform: translateX(10rem);
+      }
+      80%{
+        transform: translate(-2rem);
+      }
+
+      100%{
+        transform: translateX(0px);
+
+      }
+    }
+
+    .bnt::after{
+      content: "";
+      background: white;
+      width: 100%;
+      height: 100%;
+      border-radius: 5rem;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      transition: all 1s;
+    }
+    .bnt_animated{
+      animation: BtnToUP .5s ease-out .7s;
+      animation-fill-mode: backwards;
+    }
+  
+
+
+   
+   
+
+    
+      
+           
+    
